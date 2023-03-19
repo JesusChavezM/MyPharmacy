@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <title>MyPharmacy</title>
     <link rel="stylesheet" href="style.css">
-    <script href="scripts.js"></script>
+    
   </head>
   <body>
     <header>
-      <h1>Nombre de la farmacia</h1>
-      <nav class="inicio">
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="productos.html">Productos</a></li>
-          <li><a href="#">Promociones</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
-      </nav>
+        <div class="izq-box">
+            <a class="darktheme"><img src="/images/darktheme.png" alt="Botón de imagen" id="darktheme" onclick="darktheme()"></a>
+        </div>
+
+        <div class="center-box">
+            <a href="productos.html">Contacto</a>
+            <a href="productos.html">Productos</a>
+            <a href="productos.html">FAQ'S</a>
+        </div>
+
+        <div class="der-box">
+            <a class="darktheme" href="login.html"><img src="/images/user.png" alt="Botón de imagen"></a>
+        </div>
     </header>
-    <main>
+
+<!--
+    <section>
         <div class="login-section">
             <h2>Iniciar Sesión</h2>
             <form>
@@ -30,13 +36,17 @@
             </form>
             <p>¿No tienes cuenta? <a href="#">Regístrate aquí</a>.</p>
           </div>
-
+-->
           <!-- Proximaente proctos -->
         <div id="product-container"></div>
-    </main>
+    </section>
+    
     <footer class="pie_pagina">
       <p>Dirección de la farmacia</p>
       <p>Teléfono de la farmacia</p>
     </footer>
+
+        <script src="scripts.js"></script>
+      
   </body>
 </html>

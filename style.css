@@ -9,7 +9,13 @@ morado: #860a78
 
 
 */
-
+@font-face {
+    font-family: 'MiFuente';
+    src: url('ruta/a/mifuente.ttf');
+  }  
+html.darkmode{
+    filter: invert(100%);
+}
 /* Estilos para el cuerpo de la página */
 body {
     font-family: Arial, sans-serif;
@@ -21,141 +27,93 @@ body {
     background-color: #f47700;
     font-style: bold;
     color: white;
-    padding: 20px;
-    text-align: center;
+    border-radius: 0.5rem;
+    height: 60px;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
-  
-  /* Estilos para los enlaces */
+.izq-box, .center-box, .der-box{
+    display: inline-block;
+}
+
+.izq-box{
+    margin-right: auto;
+    padding: 4px;
+}
+
+.der-box{
+    margin-left: auto;
+    padding: 4px;
+}
+.center-box{
+    margin: 8px;
+}
+
+/* Estilos para los enlaces */
   a {
-    color: #00559f;
+    color: #294493;
     text-decoration: none;
+    align-items: center;
+    position: relative;
+    justify-content: center;
   }
   
   a:hover {
-    color: #002e5d;
+    color: #ffffff;
     text-decoration: underline;
   }
   
-  /* Estilos para los botones */
-  button {
-    background-color: #00559f;
+
+
+
+
+  .tarjeta-producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    max-width: 300px;
+  }
+  
+  .tarjeta-producto img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .tarjeta-producto h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .tarjeta-producto p {
+    margin-bottom: 10px;
+  }
+  
+  .tarjeta-producto .precio {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .tarjeta-producto .btn-comprar {
+    background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  /* Estilos para las secciones */
-  section {
-    background-color: white;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 4px;
-  }
-  
-  /* Estilos para las imágenes */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* Estilos para las tablas */
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  th, td {
-    text-align: left;
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  th {
-    background-color: #00559f;
-    color: white;
-  }
-
-  .product-card {
-    display: inline-block;
-    width: 200px;
-    margin: 10px;
-    border: 1px solid black;
-    text-align: center;
-  }
-  
-  .product-card img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-  }
-  
-  .product-card h3 {
-    margin-top: 10px;
-  }
-  
-  .product-card p {
-    font-weight: bold;
-    margin-top: 5px;
-  }
-
-  /* Estilos para el formulario de inicio de sesión */
-#login-form {
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  /* Estilos para el encabezado del formulario */
-  #login-form h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  /* Estilos para los campos de entrada */
-  #login-form label {
-    display: block;
-    font-size: 16px;
     margin-bottom: 10px;
-  }
-  
-  #login-form input[type="text"],
-  #login-form input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Estilos para el botón de inicio de sesión */
-  #login-form input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
   }
   
-  #login-form input[type="submit"]:hover {
+  .tarjeta-producto .btn-comprar:hover {
     background-color: #3e8e41;
   }
   
-  /* Estilos para el mensaje de error */
-  #login-error {
-    color: red;
-    font-size: 14px;
-    margin-top: 10px;
-  }

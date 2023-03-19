@@ -1,79 +1,5 @@
-// Obtener el botón de agregar al carrito
-var addToCartButton = document.getElementById("add-to-cart");
-
-// Obtener la cantidad de productos
-var quantityInput = document.getElementById("quantity");
-
-// Obtener el elemento de la lista de compras
-var cartList = document.getElementById("cart-list");
-
-// Crear una variable para el total
-var total = 0;
-
-// Agregar un evento de clic al botón de agregar al carrito
-addToCartButton.addEventListener("click", function() {
-  // Obtener la cantidad de productos
-  var quantity = parseInt(quantityInput.value);
-
-  // Calcular el precio total
-  var price = 10; // Precio unitario
-  var totalPrice = price * quantity;
-
-  // Crear un nuevo elemento de la lista de compras
-  var cartItem = document.createElement("li");
-  cartItem.innerText = quantity + " productos por $" + totalPrice.toFixed(2);
-
-  // Agregar el elemento a la lista de compras
-  cartList.appendChild(cartItem);
-
-  // Actualizar el total
-  total += totalPrice;
-  document.getElementById("total").innerText = "$" + total.toFixed(2);
-
-  // Restablecer la cantidad de productos a 1
-  quantityInput.value = 1;
-});
-const products = [
-    { 
-      name: "Producto 1",
-      price: 10.99,
-      image: "https://example.com/product1.jpg"
-    },
-    {
-      name: "Producto 2",
-      price: 19.99,
-      image: "https://example.com/product2.jpg"
-    },
-    // Añade tantos productos como desees
-  ];
-
-  
-
-const productContainer = document.getElementById("product-container");
-
-for (let i = 0; i < products.length; i++) {
-  // Crea un elemento div para la tarjeta del producto
-  const productCard = document.createElement("div");
-  productCard.classList.add("product-card");
-
-  // Crea un elemento img para la imagen del producto
-  const productImage = document.createElement("img");
-  productImage.src = products[i].image;
-  productImage.alt = products[i].name;
-  productCard.appendChild(productImage);
-
-  // Crea un elemento h3 para el nombre del producto
-  const productName = document.createElement("h3");
-  productName.innerText = products[i].name;
-  productCard.appendChild(productName);
-
-  // Crea un elemento p para el precio del producto
-  const productPrice = document.createElement("p");
-  productPrice.innerText = `$${products[i].price}`;
-  productCard.appendChild(productPrice);
-
-  // Añade la tarjeta del producto al contenedor de productos
-  productContainer.appendChild(productCard);
+function darktheme(){
+    document.documentElement.classList.toggle('darkmode')
 }
 
 function validarInicioSesion() {
@@ -97,3 +23,33 @@ function validarInicioSesion() {
       return false;
     }
   }
+
+
+// Obtener el contenedor de productos
+const contenedorProductos = document.getElementById("contenedor-productos");
+
+// Obtener los datos del archivo JSON utilizando Ajax
+const xhr = new XMLHttpRequest();
+xhr.open("GET", "productos.json");
+xhr.onload = function () {
+  if (xhr.status === 200) {
+    const data = JSON.parse(xhr.responseText);
+    // Crear una tarjeta de producto para cada objeto en la matriz de productos
+    for (let i = 0; i < data.productos.length; i++) {
+      const producto = data.productos[i];
+      // Crear la estructura HTML de la tarjeta de producto
+      const tarjetaProducto = document.createElement("div");
+      tarjetaProducto.classList.add("tarjeta-producto");
+      tarjetaProducto.innerHTML = `
+        <img src="${producto.imagen}" alt="${producto.nombre}">
+        <h3>${producto.nombre}</h3>
+        <p>${producto.descripcion}</p>
+        <span class="precio">${producto.precio}</span>
+        <button class="btn-comprar">Comprar</button>
+      `;
+      // Agregar la tarjeta de producto al contenedor
+      contenedorProductos.appendChild(tarjetaProducto);
+    }
+  }
+};
+xhr.send();
