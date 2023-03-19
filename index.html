@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>MyPharmacy</title>
+    <link rel="stylesheet" href="style.css">
+    <script href="scripts.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Nombre de la farmacia</h1>
+      <nav class="inicio">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="#">Promociones</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+        <div class="login-section">
+            <h2>Iniciar Sesión</h2>
+            <form>
+              <label for="email">Correo electrónico:</label>
+              <input type="email" id="email" name="email" required>
+              <label for="password">Contraseña:</label>
+              <input type="password" id="password" name="password" required>
+              <button type="submit">Iniciar Sesión</button>
+            </form>
+            <p>¿No tienes cuenta? <a href="#">Regístrate aquí</a>.</p>
+          </div>
+
+          <!-- Proximaente proctos -->
+        <div id="product-container"></div>
+    </main>
+    <footer class="pie_pagina">
+      <p>Dirección de la farmacia</p>
+      <p>Teléfono de la farmacia</p>
+    </footer>
+  </body>
+</html>
