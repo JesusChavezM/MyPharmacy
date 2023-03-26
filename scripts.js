@@ -44,8 +44,8 @@ xhr.onload = function () {
         <img src="${producto.imagen}" alt="${producto.nombre}">
         <h3>${producto.nombre}</h3>
         <p>${producto.descripcion}</p>
-        <span class="precio">${producto.precio}</span>
-        <button class="btn-comprar">Comprar</button>
+        <span>$ ${producto.precio}</span><br>
+        <button>Agregar al carrito</button>
       `;
       // Agregar la tarjeta de producto al contenedor
       contenedorProductos.appendChild(tarjetaProducto);

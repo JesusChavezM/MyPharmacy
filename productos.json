@@ -1,5 +1,42 @@
 {
     "productos": [
+
+      {
+        "nombre": "Aspirina",
+        "descripcion": "Poderosa anfetamina que logra bajar el dolor de cabeza",
+        "precio": 10.99,
+        "imagen": "/images/pink_pill.png"
+      },
+      {
+        "nombre": "Aspirina",
+        "descripcion": "Poderosa anfetamina que logra bajar el dolor de cabeza",
+        "precio": 10.99,
+        "imagen": "/images/pink_pill.png"
+      },
+      {
+        "nombre": "Aspirina",
+        "descripcion": "Poderosa anfetamina que logra bajar el dolor de cabeza",
+        "precio": 10.99,
+        "imagen": "/images/pink_pill.png"
+      },
+      {
+        "nombre": "Aspirina",
+        "descripcion": "Poderosa anfetamina que logra bajar el dolor de cabeza",
+        "precio": 10.99,
+        "imagen": "/images/pink_pill.png"
+      },
+      {
+        "nombre": "Aspirina",
+        "descripcion": "Poderosa anfetamina que logra bajar el dolor de cabeza",
+        "precio": 10.99,
+        "imagen": "/images/pink_pill.png"
+      },
+      {
+        "nombre": "Aspirina",
+        "descripcion": "Poderosa anfetamina que logra bajar el dolor de cabeza",
+        "precio": 10.99,
+        "imagen": "/images/pink_pill.png"
+      },
       {
         "nombre": "Aspirina",
         "descripcion": "Poderosa anfetamina que logra bajar el dolor de cabeza",
@@ -18,5 +55,6 @@
         "precio": 10.99,
         "imagen": "/images/pink_pill.png"
       }
+
     ]
   }

@@ -8,14 +8,17 @@ Azul: #294493
 morado: #860a78
 
 
-*/
-@font-face {
-    font-family: 'MiFuente';
-    src: url('ruta/a/mifuente.ttf');
-  }  
+*/ 
+/*Modo oscuro del html*/
 html.darkmode{
     filter: invert(100%);
+    filter: hue-rotate(180deg);
 }
+html.darkmode img{
+  filter: invert(100%);
+  filter: hue-rotate(180deg);
+}
+
 /* Estilos para el cuerpo de la página */
 body {
     font-family: Arial, sans-serif;
@@ -24,12 +27,11 @@ body {
   
   /* Estilos para el encabezado */
   header {
-    background-color: #f47700;
+    background-color: #000000;
     font-style: bold;
     color: white;
     border-radius: 0.5rem;
     height: 60px;
-    
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -37,12 +39,10 @@ body {
 .izq-box, .center-box, .der-box{
     display: inline-block;
 }
-
 .izq-box{
     margin-right: auto;
     padding: 4px;
 }
-
 .der-box{
     margin-left: auto;
     padding: 4px;
@@ -50,70 +50,168 @@ body {
 .center-box{
     margin: 8px;
 }
+/*Formato*/
+.izq-box a img{
+  background-color: rgb(246, 203, 203);
+  border-radius: 2rem;
+}
+.izq-box a img:hover{
+  background-color: #e9d011;
+  border-radius: 2rem;
+}
 
-/* Estilos para los enlaces */
-  a {
-    color: #294493;
-    text-decoration: none;
-    align-items: center;
-    position: relative;
-    justify-content: center;
-  }
+/*Formato para los enlaces del header*/
+.center-box a{
+  color: #ffffff;
+  text-decoration: none;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  font-size: 1vw;
+  margin: 1rem;
   
-  a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-  }
-  
+}
+.center-box a:hover{
+  color: #e9d011;
+  font: bold;
+  text-decoration: underline;
+}
+
+/*Estilo de las tarjetas de los productos*/
+.products-box{
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 8fr);
+}
+.tarjeta-producto{
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  height: 370px;
+  width: 270px;
+  margin: 1rem;
+  flex-basis: 25%;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border-width: 1px;
+  border-style:groove;
+  border-color: rgb(251, 255, 0);
+}
+.tarjeta-producto img{
+  max-width: 100%;
+  height: auto;
+}
+.tarjeta-producto h3{
+  font-size: 1.5rem;
+  font-style: bold;
+  color: rgb(251,255,0);
+}
+.tarjeta-producto p{
+  color: rgb(255, 255, 255);
+}
+.tarjeta-producto span{
+  color: white;
+}
+.tarjeta-producto button{
+  height: 30px;
+  width: 180px;
+  font-size: 1.3rem;
+  color: rgb(0, 0, 0);
+  background-color: rgb(246, 234, 123);
+  border-width: 0.5px;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 10px;
+}
+.tarjeta-producto button:hover{
+  color: #4e11e9;
+  font: bold;
+  text-decoration: underline;
+}
+
+/*Seccion para la landing-page*/
+.landing-page{
+  width: 100%;
+  height:80%;
+}
 
 
+  
+/*:::::Pie de Pagina*/
+.pie-pagina{
+  width: 100%;
+  background-color: #f6f6f6;
+}
+.pie-pagina .grupo-1{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap:50px;
+  padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+  width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+  color: #000000;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+  color: #000000;
+  margin-bottom: 10px;
+  
+}
+.pie-pagina .grupo-1 .box a{
+  text-decoration: none;
+  color: #000000;
+  
+}
+.pie-pagina .grupo-2{
+  background-color: #e4f1eb;
+  padding: 15px 10px;
+  color: #000000;
+  justify-content: center;
+  display: flex;
+}
+.pie-pagina .grupo-2 small{
+  margin-top: auto;
+  font-size: 16px;
+  
+}
+
+.pie-pagina .grupo-1 .red-social a{
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #000000;
+  margin-right: 10px;
+  background-color: #e4f1eb;
+  text-align: center;
+  transition: all 300ms ease;
+  border-radius: 0.5rem;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover{
+  color: #229558;
+}
 
 
-  .tarjeta-producto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 10px;
-    max-width: 300px;
+@media (max-width: 1550px) {
+  .products-box {
+    grid-template-columns: repeat(4, 1fr);
   }
-  
-  .tarjeta-producto img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  .tarjeta-producto h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-  }
-  
-  .tarjeta-producto p {
-    margin-bottom: 10px;
-  }
-  
-  .tarjeta-producto .precio {
-    font-weight: bold;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  .tarjeta-producto .btn-comprar {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-bottom: 10px;
-    cursor: pointer;
-  }
-  
-  .tarjeta-producto .btn-comprar:hover {
-    background-color: #3e8e41;
-  }
-  
+}
